@@ -14,7 +14,7 @@ with open(scaler_path, "rb") as f:
 
 # App title and description
 st.title("Wine Type Prediction")
-st.title("🍷🍷🍷")
+st.image("images/OIP.jpg",  use_container_width=True)
 st.title("Panashe Arthur Mhonde R2111434")
 st.write("""
 ### Predict the type of wine (Class 0 or Class 1) based on its features.
@@ -51,7 +51,7 @@ if st.button("Predict Wine Type"):
 
     # Make prediction
     prediction = model.predict(scaled_features)
-
+    st.title("🍷🍷🍷")
     # Display result
     wine_type = "Class 1 (red wine)" if prediction[0] == 1 else "Class 0 (white wine)"
     st.write(f"### Predicted Wine Type: {wine_type}")
